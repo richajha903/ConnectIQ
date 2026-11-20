@@ -1,0 +1,31 @@
+/* ===== App layout: desktop sidebar, mobile top bar, mobile bottom dock ===== */
+@layer components {
+  .app-shell { @apply min-h-screen bg-base-200; }
+
+  /* Desktop sidebar (hidden on mobile) */
+  .sidebar {
+    @apply fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-base-300 bg-base-100 p-5 lg:flex;
+  }
+  .sidebar-logo { @apply mb-8 px-2; }
+  .sidebar-menu { @apply w-full gap-1 p-0 text-base; }
+  .sidebar-link { @apply py-3; }
+  .sidebar-link-active { @apply bg-primary/10! font-semibold text-primary!; }
+  .sidebar-create-button { @apply mt-6 rounded-full; }
+
+  .sidebar-user-card { @apply mt-auto flex items-center gap-3 rounded-box bg-base-200 p-3; }
+  .sidebar-user-info { @apply min-w-0 flex-1; }
+
+  /* Mobile top bar (hidden on desktop). "!" is needed because daisyUI "navbar"/"dock" set display:flex */
+  .mobile-topbar {
+    @apply sticky top-0 z-20 border-b border-base-300 bg-base-100/95 px-3 backdrop-blur lg:hidden!;
+  }
+  .mobile-topbar-logo { @apply flex-1; }
+
+  /* Main page area — leaves space for the sidebar (desktop) or dock (mobile) */
+  .main-content { @apply pb-20 lg:ml-64 lg:pb-0; }
+
+  /* Mobile bottom navigation */
+  .mobile-dock { @apply z-20 border-t border-base-300 bg-base-100 lg:hidden!; }
+  .dock-link-active { @apply text-primary; }
+  .dock-create-button { @apply rounded-full bg-primary p-2 text-primary-content; }
+}

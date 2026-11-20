@@ -1,0 +1,37 @@
+/* ===== Login & Signup pages ===== */
+@layer components {
+  .auth-page { @apply grid min-h-screen lg:grid-cols-2; }
+
+  /* Left brand panel (desktop only) */
+  .auth-brand-panel {
+    @apply relative hidden flex-col overflow-hidden bg-primary p-12 text-primary-content lg:flex;
+  }
+  .auth-decor-circle-top { @apply absolute -top-24 -right-24 size-80 rounded-full bg-white/10; }
+  .auth-decor-circle-bottom { @apply absolute -bottom-32 -left-20 size-96 rounded-full bg-white/10; }
+  .auth-brand-content { @apply relative my-auto; }
+  .auth-headline { @apply text-5xl leading-tight font-bold; }
+  .auth-tagline { @apply mt-4 max-w-md text-lg text-white/80; }
+  .auth-highlight-list { @apply mt-10 space-y-4; }
+  .auth-highlight-item { @apply flex items-center gap-4 rounded-box bg-white/10 p-4; }
+  .auth-highlight-emoji { @apply text-3xl; }
+  .auth-highlight-title { @apply font-semibold; }
+  .auth-highlight-text { @apply text-sm text-white/75; }
+
+  /* Right form panel */
+  .auth-form-panel { @apply flex items-center justify-center bg-base-200 px-4 py-8 sm:p-6; }
+  .auth-form-wrapper { @apply w-full max-w-md; }
+  .auth-mobile-logo { @apply mb-6 flex justify-center lg:hidden; }
+  .auth-card { @apply bg-base-100 shadow-lg; }
+  .auth-card-body { @apply p-6 sm:p-8; }
+
+  .auth-title { @apply text-2xl font-bold sm:text-3xl; }
+  .auth-subtitle { @apply text-base-content/60; }
+  .auth-form { @apply mt-4; }
+  .auth-name-row { @apply grid grid-cols-1 gap-x-3 sm:grid-cols-2; }
+  .auth-input { @apply w-full; }
+  .auth-options-row { @apply mt-2 flex flex-wrap items-center justify-between gap-2 text-sm; }
+  .remember-me { @apply flex cursor-pointer items-center gap-2; }
+  .auth-submit-button { @apply mt-6 w-full text-base; }
+  .auth-switch-text { @apply mt-4 text-center text-sm; }
+  .auth-switch-link { @apply font-semibold; }
+}

@@ -1,0 +1,29 @@
+/* ===== Post card (home feed) ===== */
+@layer components {
+  .post-card { @apply overflow-hidden border border-base-300 bg-base-100 shadow-sm; }
+
+  .post-header { @apply flex items-center gap-3 p-3 sm:p-4; }
+  .post-author { @apply min-w-0 flex-1; }
+  .post-menu { @apply z-10 w-40 rounded-box bg-base-100 p-2 shadow-lg; }
+  .post-menu-delete { @apply text-error; }
+
+  .post-image-wrapper { @apply cursor-pointer; }
+  .post-image { @apply aspect-square w-full object-cover; }
+
+  .post-body { @apply px-3 pt-2 sm:px-4 sm:pt-3; }
+  .post-actions { @apply flex items-center gap-1; }
+  .post-save-button { @apply ml-auto; }
+  .post-like-icon.is-liked { @apply text-secondary; }
+  .post-save-icon.is-saved { @apply text-primary; }
+
+  .post-stats { @apply mt-1 text-sm font-semibold; }
+  .post-caption { @apply mt-1 text-sm; }
+  .post-username { @apply mr-1 font-semibold; }
+
+  .comment-list { @apply mt-2 space-y-1; }
+  .comment-item { @apply text-sm; }
+
+  .comment-form { @apply mt-3 flex items-center gap-2 border-t border-base-300 px-3 py-2 sm:px-4; }
+  .comment-input { @apply flex-1 focus:outline-none; }
+  .comment-submit { @apply text-primary no-underline; }
+}

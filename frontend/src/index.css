@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Our own CSS — one file per part of the app, with meaningful class names */
+@import "./styles/common.css";
+@import "./styles/layout.css";
+@import "./styles/auth.css";
+@import "./styles/post.css";
+@import "./styles/create-post.css";
+@import "./styles/home.css";
+@import "./styles/explore.css";
+@import "./styles/profile.css";
+@import "./styles/chat.css";
+
+/* Load daisyUI, but only use our own custom theme below */
+@plugin "daisyui" {
+  themes: false;
+}
+
+/* ConnectIQ theme — Ocean Blue: sky blue + teal, with an amber accent */
+@plugin "daisyui/theme" {
+  name: "connectiq";
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f0f7ff;
+  --color-base-300: #dbe7f5;
+  --color-base-content: #0f172a;
+
+  --color-primary: #0284c7;
+  --color-primary-content: #ffffff;
+  --color-secondary: #14b8a6;
+  --color-secondary-content: #ffffff;
+  --color-accent: #f59e0b;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0f172a;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  --color-success: #10b981;
+  --color-success-content: #ffffff;
+  --color-warning: #f59e0b;
+  --color-warning-content: #ffffff;
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}

@@ -1,0 +1,62 @@
+/* ===== Chat page: conversation list + chat window ===== */
+@layer components {
+  /* Full height minus mobile top bar + dock (desktop: full screen).
+     min-h-0 + shrink-0 keep the message box always visible: only the messages scroll */
+  .chat-page { @apply flex h-[calc(100dvh-9rem)] overflow-hidden lg:h-dvh; }
+
+  /* ---- Conversation list ---- */
+  .conversation-panel { @apply flex min-h-0 w-full shrink-0 flex-col border-r border-base-300 bg-base-100 md:w-80; }
+  /* On mobile we show either the list OR the open chat */
+  .conversation-panel.is-hidden-on-mobile { @apply hidden md:flex; }
+  .conversation-panel-header { @apply p-4; }
+  .chat-search { @apply mt-3 w-full rounded-full; }
+  .conversation-list { @apply min-h-0 flex-1 overflow-y-auto px-2; }
+
+  .conversation-item {
+    @apply flex w-full items-center gap-3 rounded-box p-3 text-left transition hover:bg-base-200;
+  }
+  .conversation-item.is-active { @apply bg-primary/10; }
+  .conversation-info { @apply min-w-0 flex-1; }
+  .conversation-top-row { @apply flex justify-between gap-2; }
+  .conversation-time { @apply shrink-0 text-xs text-base-content/50; }
+  .conversation-bottom-row { @apply flex items-center justify-between gap-2; }
+  .last-message { @apply truncate text-sm text-base-content/60; }
+  .last-message.is-unread { @apply font-semibold text-base-content; }
+
+  /* ---- Chat window ---- */
+  .chat-window { @apply flex min-h-0 min-w-0 flex-1 flex-col bg-base-200; }
+
+  .chat-header { @apply flex shrink-0 items-center gap-3 border-b border-base-300 bg-base-100 px-3 py-3 sm:px-4; }
+  .chat-back-button { @apply md:hidden!; }
+  .chat-contact { @apply min-w-0 flex-1; }
+  .contact-status { @apply text-xs text-base-content/50; }
+  .contact-status.is-online { @apply text-success; }
+  .summarize-button { @apply rounded-full; }
+  .summarize-label { @apply hidden sm:inline; }
+
+  .message-list { @apply min-h-0 flex-1 space-y-1 overflow-y-auto p-3 sm:p-4; }
+  .message-bubble-received { @apply bg-base-100; }
+  .message-time { @apply text-xs text-base-content/50; }
+
+  /* AI summary card */
+  .ai-summary-card {
+    @apply mx-auto mb-4 max-w-lg rounded-box border border-primary/20 bg-base-100 p-4 shadow-sm;
+  }
+  .ai-summary-header { @apply mb-2 flex items-center justify-between; }
+  .ai-summary-list { @apply list-disc space-y-1 pl-5 text-sm; }
+
+  /* AI smart replies */
+  .smart-reply-bar { @apply shrink-0 border-t border-base-300 bg-base-100 px-3 pt-3 sm:px-4; }
+  .smart-reply-controls { @apply flex flex-wrap items-center gap-2; }
+  .smart-reply-list { @apply mt-2 flex gap-2 overflow-x-auto pb-1 sm:flex-wrap; }
+  .smart-reply-chip { @apply shrink-0 rounded-full font-normal; }
+
+  /* Message input */
+  .message-form { @apply flex shrink-0 gap-2 bg-base-100 p-1 sm:p-4; }
+  .message-input { @apply flex-1 rounded-full; }
+
+  /* Empty state (desktop, no chat selected) */
+  .chat-empty-state { @apply hidden flex-1 flex-col items-center justify-center bg-base-200 text-center md:flex; }
+  .chat-empty-icon { @apply rounded-full bg-primary p-6 text-primary-content shadow-md; }
+  .chat-empty-title { @apply mt-4 text-2xl font-bold; }
+}

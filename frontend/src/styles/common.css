@@ -1,0 +1,52 @@
+/* ===== Shared styles used across many pages ===== */
+@layer components {
+  /* Icons */
+  .icon { @apply size-6 shrink-0; }
+  .icon-sm { @apply size-5 shrink-0; }
+  .icon-xs { @apply size-4 shrink-0; }
+  .icon-xl { @apply size-12 shrink-0; }
+
+  /* Avatars (used with daisyUI "avatar") */
+  .avatar-image { @apply rounded-full; }
+  .avatar-xs { @apply w-8; }
+  .avatar-sm { @apply w-10; }
+  .avatar-md { @apply w-12; }
+  .avatar-lg { @apply w-20; }
+  .avatar-ring { @apply ring-2 ring-primary ring-offset-2 ring-offset-base-100; }
+
+  /* Logo */
+  .logo { @apply flex items-center gap-2; }
+  .logo-text { @apply text-2xl font-bold tracking-tight; }
+  .logo-highlight { @apply text-primary; }
+  .logo-light .logo-text { @apply text-white; }
+  .logo-light .logo-highlight { @apply text-sky-100; }
+
+  /* Page structure */
+  .page-container { @apply mx-auto w-full max-w-5xl px-3 py-5 sm:px-4 sm:py-6; }
+  .page-title { @apply text-2xl font-bold sm:text-3xl; }
+  .page-subtitle { @apply text-sm text-base-content/60 sm:text-base; }
+  .section-title { @apply mt-8 mb-4 text-lg font-semibold; }
+
+  /* Text helpers */
+  .user-name { @apply truncate font-semibold; }
+  .user-name-link { @apply font-semibold hover:text-primary; }
+  .user-handle { @apply truncate text-xs text-base-content/60; }
+  .helper-text { @apply text-sm text-base-content/60; }
+
+  /* AI feature label: ✨ AI Caption Generator, ✨ Smart Reply... */
+  .ai-label { @apply flex items-center gap-1 font-semibold text-primary; }
+
+  /* Follow button */
+  .follow-button { @apply rounded-full; }
+
+  /* Empty state (no results / nothing here yet) */
+  .empty-state { @apply rounded-box bg-base-100 p-10 text-center text-base-content/60; }
+}
+
+/* ===== Footer ===== */
+@layer components {
+  .app-footer { @apply mt-8 border-t border-base-300 px-4 py-6 text-center text-sm text-base-content/60; }
+  .footer-copyright { @apply font-medium; }
+  .footer-brand { @apply font-semibold text-primary; }
+  .footer-tagline { @apply mt-1 text-xs; }
+}

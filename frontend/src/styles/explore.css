@@ -1,0 +1,20 @@
+/* ===== Explore page: search, people, trending ===== */
+@layer components {
+  .search-bar { @apply mt-5 w-full rounded-full sm:mt-6; }
+  .search-icon { @apply text-base-content/50; }
+  .search-input { @apply grow; }
+
+  .people-grid { @apply grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3; }
+
+  .person-card {
+    @apply border border-base-300 bg-base-100 shadow-sm transition hover:-translate-y-1 hover:shadow-md;
+  }
+  .person-card-body { @apply items-center p-5 text-center sm:p-6; }
+  .person-name { @apply mt-2 font-semibold hover:text-primary; }
+  .person-bio { @apply line-clamp-1 text-sm; }
+  .person-followers { @apply text-xs text-base-content/60; }
+  .person-follow-button { @apply mt-2 w-full; }
+
+  .trending-grid { @apply grid grid-cols-3 gap-1 sm:gap-3; }
+  .trending-image { @apply aspect-square w-full cursor-pointer rounded-box object-cover hover:opacity-80; }
+}

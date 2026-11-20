@@ -1,0 +1,40 @@
+/* ===== Create Post modal + AI Caption Generator ===== */
+@layer components {
+  .create-post-box { @apply max-w-2xl p-0; }
+
+  .modal-header { @apply flex items-center justify-between border-b border-base-300 px-4 py-3 sm:px-6 sm:py-4; }
+  .modal-title { @apply text-lg font-bold; }
+  .modal-footer { @apply flex justify-end gap-2 border-t border-base-300 px-4 py-3 sm:px-6 sm:py-4; }
+  .modal-footer-buttons { @apply flex gap-2; }
+  .share-button { @apply px-8; }
+
+  .create-post-content { @apply grid gap-4 p-4 sm:gap-6 sm:p-6 md:grid-cols-2; }
+
+  /* Image upload area */
+  .image-upload-area {
+    @apply flex aspect-video cursor-pointer flex-col items-center justify-center overflow-hidden rounded-box
+      border-2 border-dashed border-primary/30 bg-primary/5 transition hover:bg-primary/10 md:aspect-square;
+  }
+  .image-upload-icon { @apply text-primary; }
+  .image-upload-title { @apply mt-2 font-medium; }
+  .image-upload-hint { @apply text-xs text-base-content/60; }
+  .image-preview { @apply h-full w-full object-cover; }
+  .hidden-file-input { @apply hidden; }
+
+  /* Caption side */
+  .caption-section { @apply flex flex-col gap-3; }
+  .caption-author { @apply flex items-center gap-2; }
+  .caption-input { @apply h-24 w-full sm:h-28; }
+
+  /* AI Caption Generator panel */
+  .ai-caption-panel { @apply rounded-box border border-primary/20 bg-primary/5 p-4; }
+  .ai-caption-panel .ai-label { @apply mb-2; }
+  .keyword-input { @apply w-full; }
+  .tone-switcher { @apply mt-2 w-full; }
+  .tone-button { @apply flex-1; }
+  .generate-button { @apply mt-3 w-full; }
+
+  .caption-suggestion-list { @apply mt-3 space-y-2; }
+  .caption-suggestion { @apply flex items-start gap-2 rounded-field bg-base-100 p-2 text-sm shadow-xs; }
+  .caption-suggestion-text { @apply flex-1; }
+}

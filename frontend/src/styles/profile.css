@@ -1,0 +1,46 @@
+/* ===== Profile page ===== */
+@layer components {
+  .profile-page { @apply mx-auto w-full max-w-4xl px-3 py-5 sm:px-4 sm:py-6; }
+
+  .profile-card { @apply overflow-hidden border border-base-300 bg-base-100 shadow-sm; }
+  .profile-cover { @apply h-28 bg-primary sm:h-44; }
+  .profile-card-body { @apply px-4 pt-0 pb-5 sm:px-8; }
+
+  /* Mobile: centered column. Desktop: avatar + name + buttons in one row */
+  .profile-header-row {
+    @apply -mt-12 flex flex-col items-center gap-3 text-center sm:-mt-14 sm:flex-row sm:items-end sm:gap-4 sm:text-left;
+  }
+  .profile-avatar { @apply w-24 rounded-full ring-4 ring-base-100 sm:w-28; }
+  .profile-identity { @apply flex-1; }
+  .profile-name { @apply text-xl font-bold sm:text-2xl; }
+  .profile-handle { @apply text-base-content/60; }
+  .profile-actions { @apply flex w-full gap-2 sm:w-auto; }
+  .profile-action-button { @apply flex-1 rounded-full sm:flex-none; }
+  .profile-bio { @apply mt-3 text-center sm:text-left; }
+
+  .profile-stats { @apply mt-4 grid grid-cols-3 rounded-box bg-base-200 py-3 text-center; }
+  .profile-stat-value { @apply text-lg font-bold sm:text-2xl; }
+  .profile-stat-label { @apply text-xs text-base-content/60 sm:text-sm; }
+
+  .profile-tabs { @apply mt-6 justify-center; }
+  .profile-tab { @apply gap-2; }
+  .profile-tab-active { @apply text-primary; }
+
+  /* Posts grid with hover overlay */
+  .profile-post-grid { @apply mt-4 grid grid-cols-3 gap-1 sm:gap-3; }
+  .profile-post { @apply relative cursor-pointer overflow-hidden rounded-box; }
+  .profile-post-image { @apply aspect-square w-full object-cover transition hover:scale-105; }
+  .profile-post-overlay {
+    @apply pointer-events-none absolute inset-0 hidden items-center justify-center gap-4 bg-black/40 font-semibold text-white
+      sm:flex sm:opacity-0 sm:transition;
+  }
+  .profile-post:hover .profile-post-overlay { @apply opacity-100; }
+  .overlay-stat { @apply flex items-center gap-1; }
+
+  .saved-empty { @apply mt-10 text-center text-base-content/60; }
+  .saved-empty-icon { @apply mx-auto; }
+
+  /* Edit profile modal */
+  .edit-avatar-row { @apply mt-4 flex items-center gap-4; }
+  .edit-profile-input { @apply w-full; }
+}

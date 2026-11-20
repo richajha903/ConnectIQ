@@ -1,0 +1,22 @@
+/* ===== Home page: feed + right sidebar ===== */
+@layer components {
+  .home-page { @apply mx-auto flex max-w-5xl gap-8 px-3 py-5 sm:px-4 sm:py-6; }
+  .feed { @apply mx-auto w-full max-w-xl space-y-5 sm:space-y-6; }
+
+  /* Right sidebar (large screens only) */
+  .home-sidebar { @apply hidden w-80 shrink-0 xl:block; }
+  .home-sidebar-sticky { @apply sticky top-6 space-y-6; }
+
+  .ai-promo-card { @apply bg-primary text-primary-content shadow-md; }
+  .ai-promo-text { @apply text-sm text-white/85; }
+  .ai-promo-button { @apply mt-2 border-0 bg-white text-primary; }
+
+  .suggestions-card { @apply border border-base-300 bg-base-100; }
+  .suggestions-body { @apply p-5; }
+  .suggestions-title { @apply font-semibold; }
+  .suggestion-list { @apply mt-2 space-y-4; }
+  .suggestion-item { @apply flex items-center gap-3; }
+  .suggestion-info { @apply min-w-0 flex-1; }
+  .suggestion-name { @apply block truncate text-sm font-semibold hover:text-primary; }
+  .see-all-link { @apply mt-3 text-sm; }
+}
